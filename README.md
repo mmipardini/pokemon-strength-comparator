@@ -23,7 +23,7 @@ git clone https://github.com/mmipardini/pokemon-strength-comparator
      ``` bash
      dotnet restore
      ```
-   - And this one for the front-end ones:
+   - For the front-end dependencies, use this command::
      ``` bash
      npm install
      ```
