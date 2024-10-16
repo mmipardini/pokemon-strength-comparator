@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+.pokemon-card {
+  transition: transform 0.2s;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.card-img-top {
+  height: 350px;
+  object-fit: cover;
+}
