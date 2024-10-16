@@ -44,11 +44,11 @@ namespace UnitTests
             var charizardData = new Pokemon { Name = "charizard", Stats = new List<PokemonStat> { new() { Stat = new StatDetail { Name = "hp" }, Base_stat = 78 } } };
 
             _mockHttpMessageHandler.Protected().Setup<Task<HttpResponseMessage>>(
-                    "SendAsync", ItExpr.Is<HttpRequestMessage>(req => req.RequestUri.ToString().Contains("pikachu")), ItExpr.IsAny<CancellationToken>())
+                    "SendAsync", ItExpr.Is<HttpRequestMessage>(req => req.RequestUri != null && req.RequestUri.ToString().Contains("pikachu")), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage { StatusCode = HttpStatusCode.OK, Content = new StringContent(JsonConvert.SerializeObject(pikachuData)) });
 
             _mockHttpMessageHandler.Protected().Setup<Task<HttpResponseMessage>>(
-                "SendAsync", ItExpr.Is<HttpRequestMessage>(req => req.RequestUri.ToString().Contains("charizard")), ItExpr.IsAny<CancellationToken>())
+                "SendAsync", ItExpr.Is<HttpRequestMessage>(req => req.RequestUri != null && req.RequestUri.ToString().Contains("charizard")), ItExpr.IsAny<CancellationToken>())
                 .ReturnsAsync(new HttpResponseMessage { StatusCode = HttpStatusCode.OK, Content = new StringContent(JsonConvert.SerializeObject(charizardData)) });
 
             // Act

@@ -17,7 +17,10 @@ namespace PokemonAPI.Services
             var response = await _httpClient.GetStringAsync(url);
             var serializedResponse = JsonConvert.DeserializeObject<Pokemon>(response);
 
-            return serializedResponse;
+            if(serializedResponse == null)
+                throw new InvalidOperationException($"Failed to deserialize data for {pokemonName}.");
+            else
+                return serializedResponse;
         }
         public async Task<string> ComparePokemonStrengthAsync(string firstPokemon, string secondPokemon)
         {
