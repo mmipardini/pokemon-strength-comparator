@@ -42,7 +42,7 @@ Once the application is up and running, a Swagger UI page will open for the back
 The user interface features two dropdown selectors that allow you to choose a Pokemon from a list of names, along with a 'Compare' button. An example of the interface is shown in the image below:
 ![image](https://github.com/user-attachments/assets/d393c663-2a03-449b-ae0d-8d832dd4e05f)
 # Tests
-The backend includes unit tests to ensure functionality and reliability. To execute these tests, simply run the following command
+The backend includes unit tests to ensure functionality and reliability. To execute these tests, simply run the following command:
 ``` bash
 dotnet test
 ```
