@@ -6,7 +6,6 @@
 - **React**: For building the user interface.
 - **JavaScript**: For application logic.
 - **CSS**: For styling the components, with Bootstrap for layout.
-- **Fetch API**: To fetch data from the PokéAPI.
 - **HTML**: For structuring the web pages.
 ## Back-end
 - **.NET 6**: The framework used to build the API.
@@ -23,7 +22,7 @@ git clone https://github.com/mmipardini/pokemon-strength-comparator
      ``` bash
      dotnet restore
      ```
-   - For the front-end dependencies, use this command::
+   - For the front-end dependencies, use this command:
      ``` bash
      npm install
      ```
